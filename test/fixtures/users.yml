@@ -1,1 +1,4 @@
-#empty to remove duplicate email bug
+Connor:
+  name: Connor Example
+  email: Connor@example.com
+  password_digest: <%= User.digest('password') %>
