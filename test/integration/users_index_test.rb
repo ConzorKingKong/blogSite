@@ -3,8 +3,8 @@ require 'test_helper'
 class UsersIndexTest < ActionDispatch::IntegrationTest
 
   def setup
-    @admin     = users(:Connor)
-    @non_admin = users(:Gob)
+    @admin     = users(:michael)
+    @non_admin = users(:archer)
   end
 
   test "index as admin including pagination and delete links" do
@@ -16,8 +16,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     first_page_of_users.each do |user|
       assert_select 'a[href=?]', user_path(user), text: user.name
       unless user == @admin
-        assert_select 'a[href=?]', user_path(user), text: 'delete',
-                                                    method: :delete
+        assert_select 'a[href=?]', user_path(user), text: 'delete'
       end
     end
     assert_difference 'User.count', -1 do

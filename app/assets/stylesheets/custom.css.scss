@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*mixins, variables, etc. */
+/* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
 
@@ -12,10 +12,6 @@ $gray-medium-light: #eaeaea;
 }
 
 /* universal */
-
-html {
-  overflow-y: scroll;
-}
 
 body {
   padding-top: 60px;
@@ -32,9 +28,10 @@ textarea {
 .center {
   text-align: center;
   h1 {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
   }
 }
+
 
 /* typography */
 
@@ -75,12 +72,10 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-  color: $gray-light;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
   }
 }
-
-
 
 /* footer */
 
@@ -197,7 +192,7 @@ input {
   margin-left: 0;
 }
 
-/* users index */
+/* Users index */
 .users {
   list-style: none;
   margin: 0;
