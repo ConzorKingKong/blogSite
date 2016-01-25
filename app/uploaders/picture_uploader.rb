@@ -2,6 +2,7 @@
 
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
+  process :auto_orient
   process resize_to_limit: [400, 400]
 
   # Choose what kind of storage to use for this uploader:
@@ -36,6 +37,14 @@ class PictureUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process :resize_to_fit => [50, 50]
   # end
+
+  #Code copied from google, auto-orient images. need to add process :auto_orient
+  #before all other process steps
+  def auto_orient
+    manipulate! do |image|
+      image.tap(&:auto_orient)
+    end
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
