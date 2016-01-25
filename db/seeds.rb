@@ -1,8 +1,9 @@
 # Users
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
+User.create!(name:  "Connor Peshek",
+             email: "Connorpeshek@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
+             admin:        true,
              activated:    true,
              activated_at: Time.zone.now)
 99.times do |n|
