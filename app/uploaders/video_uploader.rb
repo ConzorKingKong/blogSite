@@ -2,7 +2,6 @@
 class VideoUploader < CarrierWave::Uploader::Base
   include CarrierWave::FFmpeg
   # process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
