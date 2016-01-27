@@ -39,7 +39,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   # end
 
   #Code copied from google, auto-orient images. need to add process :auto_orient
-  #before all other process steps
+  #before all other process steps. Code works like a charm!
   def auto_orient
     manipulate! do |image|
       image.tap(&:auto_orient)
