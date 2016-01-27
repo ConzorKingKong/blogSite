@@ -4,7 +4,8 @@ class Micropost < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   mount_uploader :video, VideoUploader
   validates :user_id, presence: true
-  validates :content, presence: true, length: {maximum: 1000}
+  validates :content, length: {maximum: 1000}
+  validate :has_a_name
   validate :picture_size
   # validate :set_success
 
