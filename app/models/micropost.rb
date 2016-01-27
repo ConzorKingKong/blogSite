@@ -22,4 +22,10 @@ class Micropost < ActiveRecord::Base
     self.success = true
   end
 
+  def has_a_name
+  unless [content?, picture?, video?].include?(true)
+    errors.add :base, 'You need at least one input in the micropost!'
+  end
+end
+
 end
