@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
 
     def micropost_params
       # Permit is what is allowed to the web (?)
-      params.require(:micropost).permit(:content, :picture)
+      params.require(:micropost).permit(:content, :picture, :video)
     end
 
     def correct_user

@@ -5,7 +5,10 @@
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
   <span class="picture">
+    <h6>Photo/GIF uploader</h6>
     <%= f.file_field :picture %>
+    <h6>WebM/Video uploader</h6>
+    <%= f.file_field :video %>
   </span>
 <% end %>
 
