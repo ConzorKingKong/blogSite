@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   root                'static_pages#home'
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
   get    'faq'     =>  'static_pages#faq'
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
