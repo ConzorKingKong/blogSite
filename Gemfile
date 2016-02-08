@@ -18,7 +18,6 @@ gem 'jbuilder',                '2.2.3'
 gem 'sdoc',                    '0.4.0', group: :doc
 gem 'carrierwave-video'
 gem 'carrierwave-ffmpeg'
-gem 'acme-client'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
