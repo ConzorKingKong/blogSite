@@ -11,7 +11,7 @@ class StaticPagesController < ApplicationController
   end
 
   def letsencrypt
-    render text: "6UCA3EH4aqd9ZEUzrAWnyNewTXyr4G3vutn5I2_U2SU.K5rjLgOHP4oAmbk7dApTjA-E9RoDurCzbBYbGfjJwjk"
+    render text: "UOFt0tR3tbxBD4Uckut2opuuUPbB6GdITsmt_Ltxr9M.K5rjLgOHP4oAmbk7dApTjA-E9RoDurCzbBYbGfjJwjk"
   end
 
   def help
